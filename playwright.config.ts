@@ -12,9 +12,9 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  //testDir: './tests',
+  testDir: './tests',
   /* Run tests in files in parallel */
-  testMatch:['tests/01_browserContext.spec.ts'],
+  //testMatch:['tests/01_browserContext.spec.ts'],
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -27,13 +27,13 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://www.lambdatest.com/selenium-playground/simple-form-demo',
+    //baseURL: 'https://www.lambdatest.com/selenium-playground/simple-form-demo',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     headless:false,
     launchOptions:{
-      slowMo:1000
+      slowMo:2000
     }
   },
 
@@ -55,10 +55,10 @@ export default defineConfig({
     },
 
     /* Test against mobile viewports. */
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Pixel 5'] },
+    // },
     // {
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },
