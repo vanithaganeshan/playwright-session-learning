@@ -4,5 +4,7 @@
     "@types/node": "^22.10.5",
     "eslint-plugin-playwright": "^2.1.0"
   },
-  "scripts": {}
+  "scripts": {
+    "tests":"npx playwright test"
+  }
 }

@@ -26,7 +26,6 @@ export default defineConfig({
   //reporter: [['dot'],['junit',{outputFile:'junit/junit-report.xml'}],
   //['json',{outputFile:'json/json-report.json'}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  //grep:/@smoke/,
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     //baseURL: 'https://www.lambdatest.com/selenium-playground/simple-form-demo',
@@ -43,15 +42,15 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'],
-        deviceScaleFactor:undefined,
-        viewport:null,
-        launchOptions:{
-          args:['--start-maximized']
-        } },
-    },
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'],
+    //     deviceScaleFactor:undefined,
+    //     viewport:null,
+    //     launchOptions:{
+    //       args:['--start-maximized']
+    //     } },
+    // },
 
     {
       name: 'firefox',
