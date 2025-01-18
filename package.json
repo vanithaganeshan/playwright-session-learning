@@ -2,9 +2,9 @@
   "devDependencies": {
     "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.5",
-    "eslint-plugin-playwright": "^2.1.0"
+    "typescript": "^5.7.3"
   },
   "scripts": {
-    "tests":"npx playwright test"
+    "tests": "npx playwright test"
   }
 }

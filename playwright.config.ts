@@ -12,7 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: '.',
   /* Run tests in files in parallel */
   //testMatch:['tests/01_browserContext.spec.ts'],
   fullyParallel: true,
@@ -26,7 +26,7 @@ export default defineConfig({
   //reporter: [['dot'],['junit',{outputFile:'junit/junit-report.xml'}],
   //['json',{outputFile:'json/json-report.json'}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  //grep:/@smoke/,
+ // grep:/@smoke|@sanity1/,
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     //baseURL: 'https://www.lambdatest.com/selenium-playground/simple-form-demo',
@@ -53,15 +53,15 @@ export default defineConfig({
         } },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
